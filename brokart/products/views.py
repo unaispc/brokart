@@ -14,4 +14,6 @@ class product(models.MODEL):
     delete_status=models.IntegerField(choices=DELETE_CHOICES,default=LIVE)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
-    
+
+    def __str(self) -> str:
+        return self.title
